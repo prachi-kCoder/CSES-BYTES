@@ -14,7 +14,7 @@ The outer loop goes over the target sum, and the inner loop iterates through eac
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll ;
-
+const int mod = 1e9 + 7;
 int main() {
     // Coin comb 1 : Targets are ordered 
 	int n , x ;
@@ -29,7 +29,7 @@ int main() {
 	for ( int j = 0 ; j <= x ; j++ ) {
 	    for (int i = 0 ; i < n ; i++ ) {
 	        if ( j + coins[i] <= x ) {
-	            dp[j + coins[i]] += dp[j] ;// target made in order 
+	            dp[j + coins[i]] = (dp[j+ coins[i]] + dp[j])%mod ;// target made in order 
 	        }
 	    }
 	}
@@ -51,7 +51,7 @@ We're preventing rearrangements of the same coins from being counted multiple ti
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll ;
-
+const int mod = 1e9 + 7 ;
 int main() {
     int n , x ;
     cin >> n >> x ;
@@ -66,7 +66,7 @@ int main() {
     for (int i = 0 ; i < n ; i++) {
         for (int j = 0 ; j <=x ; j++) {
             if (j +  coins[i] <= x) {
-                dp[j + coins[i]] += dp[j] ;
+                dp[j + coins[i]] = (dp[j+ coins[i]] + dp[j])%mod ; ;
             }
         }
     }
@@ -75,5 +75,5 @@ int main() {
 ```
 
 Here dp  = [1 0 1 1 1 2 2 2 3 3] 
-As smaller coins are picked first to make any improvement in the sum if possible then increasing targets .
+As smaller coins are picked first to make any improvement in the sum if possible then increasing the coins values .
 

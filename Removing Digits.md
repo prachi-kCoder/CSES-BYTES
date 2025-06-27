@@ -10,7 +10,7 @@ Update dp[i] by choosing the minimum of all such paths:
 
 By the time you reach n, dp[n] holds the optimal answer—the fewest number of steps to reduce it to 0
 
-```
+```cpp
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -40,6 +40,9 @@ int main() {
 }
 
 ```
+## COMPLEXICITY ANALYSIS : 
+### ⏱ Time Complexity:  O(N^2) + Function Call Overhead 
+### 🧠 Space Complexity:  O(N^2 + n) AS Recursion Stack at most 2n in Worst Case  
 ## TABULATION APPROACH : (Sum up the right and down paths )
 ```cpp
 #include <bits/stdc++.h>
@@ -76,3 +79,7 @@ int main() {
 }
 
 ```
+
+## COMPLEXICITY ANALYSIS : 
+### ⏱ Time Complexity:  O(N^2) 
+### 🧠 Space Complexity:  O(N^2 ) 

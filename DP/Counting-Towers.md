@@ -39,35 +39,35 @@
           cout << (dp[1][0] + dp[1][1])%M << endl ;
       }
   }
-```
+``` 
 
-```cpp
-#include <bits/stdc++.h>
-#define FASTIO ios_base::sync_with_stdio(0) , cin.tie(0) , cout.tie(0)
-#define ll long long 
-#define M 1000000007 
-using namespace std;
-
-ll dp[(int)1e6+5][2] ;
-int main() {
-    FASTIO ;
-    int t ;
-    cin >> t ;
-    
-    // while (t-- > 0){
-    //     int n ; 
-    //     cin >> n ;
-    //     ll vertical = 1LL , hori = 1LL ;
-    //     for (int i = n-1 ; i > 0 ;i--) {
-    //         ll newHori = (2LL*hori + vertical) %M;
-    //         ll newVertical = (4LL*vertical + hori) %M;
-    //         vertical = newVertical ;
-    //         hori = newHori ;
-    //     }
-    //     cout << ( vertical + hori)%M << endl ;
-    // }
+``` cpp
+	#include <bits/stdc++.h>
+	#define FASTIO ios_base::sync_with_stdio(0) , cin.tie(0) , cout.tie(0)
+	#define ll long long 
+	#define M 1000000007 
+	using namespace std;
 	
-}
+	ll dp[(int)1e6+5][2] ;
+	int main() {
+	    FASTIO ;
+	    int t ;
+	    cin >> t ;
+	    
+	    // while (t-- > 0){
+	    //     int n ; 
+	    //     cin >> n ;
+	    //     ll vertical = 1LL , hori = 1LL ;
+	    //     for (int i = n-1 ; i > 0 ;i--) {
+	    //         ll newHori = (2LL*hori + vertical) %M;
+	    //         ll newVertical = (4LL*vertical + hori) %M;
+	    //         vertical = newVertical ;
+	    //         hori = newHori ;
+	    //     }
+	    //     cout << ( vertical + hori)%M << endl ;
+	    // }
+		
+	}
 ```
 
 ### COMPLEXICITY ANALYSIS : 

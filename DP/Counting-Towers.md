@@ -54,20 +54,21 @@
 	    int t ;
 	    cin >> t ;
 	    
-	    // while (t-- > 0){
-	    //     int n ; 
-	    //     cin >> n ;
-	    //     ll vertical = 1LL , hori = 1LL ;
-	    //     for (int i = n-1 ; i > 0 ;i--) {
-	    //         ll newHori = (2LL*hori + vertical) %M;
-	    //         ll newVertical = (4LL*vertical + hori) %M;
-	    //         vertical = newVertical ;
-	    //         hori = newHori ;
-	    //     }
-	    //     cout << ( vertical + hori)%M << endl ;
-	    // }
+	    while (t-- > 0){
+	        int n ; 
+	        cin >> n ;
+	        ll vertical = 1LL , hori = 1LL ;
+	        for (int i = n-1 ; i > 0 ;i--) {
+	            ll newHori = (2LL*hori + vertical) %M;
+	            ll newVertical = (4LL*vertical + hori) %M;
+	            vertical = newVertical ;
+	            hori = newHori ;
+	        }
+	        cout << ( vertical + hori)%M << endl ;
+	    }
 		
 	}
+
 ```
 
 ### COMPLEXICITY ANALYSIS : 

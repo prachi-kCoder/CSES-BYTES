@@ -57,8 +57,9 @@ int main() {
 
 📊 Constraint Pro Tips to Keep IN Mind
 
-- When constraints say:
-### Up to 1e5 → STL (vector, map) is OK
-### Up to 2e5–5e5 → optimize loops and segment tree carefully, prefer arr[]
-### Up to 1e6 or more → use fast I/O, preallocated arrays, and avoid STL containers in inner loops
-### Use FASTIO : ios_base::sync_with_stdio(0) , cin.tie(0)  for fast I/P & O/P 
+|When constraints say| WHAT TO DO ? |
+|-------------------|---------------| 
+| Up to 1e5  	    | STL (vector, map) is OK |
+| Up to 2e5–5e5     | optimize loops and segment tree carefully, prefer arr[] |
+| Up to 1e6 or more | use fast I/O, preallocated arrays, and avoid STL containers in inner loops |
+| Use FASTIO        | ios_base::sync_with_stdio(0) , cin.tie(0)  for fast I/P & O/P |

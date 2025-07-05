@@ -7,7 +7,6 @@
 using namespace std ;
 const int N = 1001 ;
 int a1[N] , a2[N]  , dp[N][N] ;
-
 int main() {
 	FASTIO ;
 	int n , m ;
@@ -24,22 +23,20 @@ int main() {
 	    }
 	}
 	cout << dp[n][m] << '\n';
-	
-	vector<int> res ;
-	int i = n , j = m ;
-	while (i > 0  && j > 0) {
+	function<void(int,int)> printLCS = [&](int i, int j) {
+	    if (i == 0 || j == 0) return ;
 	    if (a1[i-1] == a2[j-1]) {
-	        res.push_back(a1[i-1]);
-	        i-- ; j-- ;
+	        printLCS(i-1 , j-1) ;
+	        cout << a1[i-1] << " ";
 	    }else if (dp[i-1][j] >= dp[i][j-1]) {
-	        i-- ;
+	        printLCS(i-1 , j);
 	    }else {
-	        j-- ;
+	        printLCS(i , j-1);
 	    }
-	}
-	for (int r = res.size()-1 ; r >= 0 ;r-- ) {
-	    cout << res[r] << " ";
-	}
+	};
+	
+	printLCS(n , m) ;
+
 	cout << '\n' ;
 }
 ```

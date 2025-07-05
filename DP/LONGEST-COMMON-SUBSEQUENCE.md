@@ -46,4 +46,4 @@ int main() {
 | Complexicty             | Calculation | How |
 |-------------------------|------------------|------------------------------------| 
 | Time Complexicity 	  | O(n*m) + O(n+m) |Creation of table , Forming subsequence|
-|Space Complexicity 	  |O(n*m) + O(min(n,m))| Creation of table , Forming subseq |
+|Space Complexicity 	  |O(n*m) + O(min(n,m))| Creation of table , recursive stack |

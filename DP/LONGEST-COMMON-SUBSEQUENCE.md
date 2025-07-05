@@ -46,8 +46,7 @@ int main() {
 
 📊 COMPLEXICITY ANALYSIS :
 
-| Complexicty             | Calculation |
-|-------------------------|-------------------------------------------------------| 
-| Time Complexicity 	    | O(n*m) + O(n+m) {Creation of table , Forming subsequence}|
-| Space Complexicity 	    | O(n*m) + O(min(n,m)) {Creation of table , Forming subseq}|
-|------------------------------------------------------------------------------------|
+| Complexicty             | Calculation | How |
+|-------------------------|------------------|------------------------------------| 
+| Time Complexicity 	  | O(n*m) + O(n+m) |Creation of table , Forming subsequence|
+|Space Complexicity 	  |O(n*m) + O(min(n,m))| Creation of table , Forming subseq |

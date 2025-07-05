@@ -66,6 +66,7 @@ int main() {
 	
 }
 ```
-| Complexity Analysis | BigO  | HOW ? |
-| ⏱️ Time  | O( n + m ) |  n vertices , m edges |
-| 🧠 Space  | O( n + m ) |  n vertices , m edges |
+| Complexity Analysis  | BigO       | HOW ?  |
+|----------------------|------------|-------|
+| ⏱️ Time 	       | O( n + m ) |  n vertices , m edges |
+| 🧠 Space  	       | O( n + m ) |  n vertices , m edges |

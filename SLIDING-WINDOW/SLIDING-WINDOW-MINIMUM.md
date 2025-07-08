@@ -96,4 +96,4 @@ int main() {
 | METRIC  |   COMPLEXICITY  |  HOW ?  | 
 |---------|-----------------|----------|
 | TIME    |  O(n + n)       | Array creation + Deque for n elements |
-| SPACE   |  O(n + n)       | PriorityQueue + Array used |
+| SPACE   |  O(n + n)       | Deque + Array used |

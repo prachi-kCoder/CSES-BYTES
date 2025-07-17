@@ -34,6 +34,7 @@
   ```
 
 ## CODE SOLUTION 
+#### MEMOIZATION
 ```cpp
 #include <bits/stdc++.h>
 #define FASTIO ios_base::sync_with_stdio(0) , cin.tie(0) , cout.tie(0)
@@ -64,3 +65,43 @@ int main() {
 }
 
 ```
+#### TABULATION
+```cpp
+#include <bits/stdc++.h>
+#define FASTIO ios_base::sync_with_stdio(0) , cin.tie(0)
+#define ll long long
+using namespace std;
+
+int main() {
+	FASTIO ;
+	int n ;
+	cin >> n ;
+	vector<int> a(n) ;
+	for (int& x:a) cin >> x ;
+	
+	vector<vector<ll>> dp(n , vector<ll>(n , 0LL)) ;
+	// for len = 1 
+	for (int i = 0; i < n ; i++) {
+	    dp[i][i] = a[i];
+	}
+	for (int len = 2 ; len <= n ; len++) {
+	    for (int i = 0 ;i + len - 1 < n ; i++) {
+	        int j = i + len - 1 ;
+	        dp[i][j] = max( a[i] - dp[i+1][j] , a[j] - dp[i][j-1]) ;
+	    }
+	}
+	ll diff = dp[0][n-1] ;
+	ll total = accumulate(a.begin() , a.end() , 0LL) ;
+	cout << (total + diff)/2 << endl;
+	return  0 ;
+}
+
+```
+
+
+# 🔍 Complexity Analysis
+
+| METRIC   | COMPLEXICITY  |    HOW ? |
+|-----------|-------------|------------|
+| 🧭 TIME  |   O(N*M)      | O(N*M)      left, right pointer |
+| 🧠 SPACE |  O(N*M)    |   Recursion Stack / Tabulation table       |

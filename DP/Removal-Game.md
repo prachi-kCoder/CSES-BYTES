@@ -9,12 +9,12 @@
     - He picks either a[l] or a[r].
     - If he picks a[l], then the remaining subproblem is dp(l+1, r), and now it's Player 2's turn.
     - -So Player 1 gets: a[l] - dp(l+1, r)
-#### (Why minus? 
+#### Why minus? 
 - Because dp(l+1, r) is Player2's advantage in the remaining subarray — Player1 wants to reduce that.)
 - Same for picking a[r]:
 - Player 1 gets: a[r] - dp(l, r-1) , here dp(l,r-1) is the player2 advantage
 
-- ## The difference of a[l] - dp[l+1, r]  & a[r] - dp[l , r-1]  this shows the Player1's advantage over the other Player2 hence take the maximum of the 2 advantage
+#### The differences : a[l] - dp[l+1, r]  & a[r] - dp[l , r-1]  this shows the Player1's advantage over the other Player2 hence take the maximum of the 2 advantage
  ```cpp
   dp(l, r) = max(
     a[l] - dp(l+1, r),

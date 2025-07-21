@@ -47,8 +47,9 @@ int main() {
 }
 ```
 ## POINT OF CONFUSION  :
-- People gets confused at where to do tree[idx] = tree[2*idx+1]^tree[2*idx+2]  , or take the values from the left , right and return left^right , on any operation (not necessarily be xor only )
+- People gets confused at where to do **tree[idx] = tree[2*idx+1]^tree[2*idx+2]**  , or take the values from the left , right and return **left^right** , on any operation (not necessarily be xor only )
 - Keep in mind the difference :
+  
  |     tree[idx] = tree[2*idx+1]^tree[2*idx+2]   |     left^right |
  |------------------|-----------------------------|
  |  build() – Bottom-Up Construction  , update() – Modify a Value and Fix the Path {Because when a leaf changes, all affected parents must recompute their merged result.}   |   query partial ranges ans are computed and returned  |

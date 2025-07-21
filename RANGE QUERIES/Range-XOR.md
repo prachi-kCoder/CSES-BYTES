@@ -60,7 +60,7 @@ int main() {
 |----------------|------------------------------|------------|
 |build()	|✅ Yes	|Construct tree bottom-up |
 |update()	|✅ Yes	|Recompute parents after modification |
-|query()	|⚠️ No direct assignment	} Return XOR of valid subranges (not raw children) {leftXor^rightXor} |
+|query()	|⚠️ No direct assignment	| Return XOR of valid subranges (not raw children) {leftXor^rightXor} |
 
 
 # 🔍 Complexity Analysis

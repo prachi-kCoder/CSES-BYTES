@@ -9,7 +9,7 @@
 ```
 dp[v] = (dp[u] + dp[v])%mod  # this is should be done only when the dp[u] is finalized and its made possible with TOPOLOGICAL Order !
 ```
-
+## BFS KAHN'S ALGO
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -64,7 +64,54 @@ int main() {
     return  0 ;
 }
 ```
+## DFS TOPO
+```
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define mod 1000000007
+vector<vector<int>> adj ;
+void get_topo(int node , vector<int>& topo, vector<bool>& vis) {
+    // dfs for nbr first 
+    vis[node] = true ;
+    for (int nbr : adj[node]) {
+        if (!vis[nbr]) {
+            get_topo(nbr , topo, vis) ;
+        }
+    }
+    topo.push_back(node) ;
+}
+int main() {
+    int n , m ;
+    cin >> n >> m ;
+    
+    adj.resize(n);
+    for (int i = 0 ; i < m ; i++) {
+        int a , b ;
+        cin >> a >> b ;
+        a-- , b-- ;
+        adj[a].push_back(b) ;
+    }
+    vector<int> topo ;
+    
+    vector<bool> vis(n , false) ;
+    get_topo(0 , topo , vis) ;
+    reverse(topo.begin() , topo.end());
+    
 
+    
+    vector<ll> dp(n , 0LL) ;
+    dp[0] = 1LL;
+    for (int u : topo) {
+        for (int v : adj[u]) {
+            dp[v] = (dp[v] + dp[u])%mod ;
+        }
+    }
+    cout << dp[n-1] << endl ;
+	return 0 ;
+
+}
+```
 
 # 🔍COMPLEXICITY ANALYSIS
 

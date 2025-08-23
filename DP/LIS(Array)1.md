@@ -1,4 +1,4 @@
-# LIS-SUBSEQUENCE OF AN ARRAY :
+# LIS OF AN ARRAY :
 
 - This gives `TLE` :Although intuition is right but O(N*N) complexicity is not optmal way
 

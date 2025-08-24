@@ -1,4 +1,4 @@
-# Road-Reaparation
+# Road-Reparation
 
 ###### VERY IMPORTANT POINTS TO KEEP IN MIND :
 - vertex > n-1 is not a safe early termination condition , done fall in this trap , Because connected graph->`MST` has exactly n-1 edges , but if graph is Disconnected ever reach n-1 edges, and early termination will miss valid edges that belong to other components.

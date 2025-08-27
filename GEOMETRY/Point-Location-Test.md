@@ -10,7 +10,7 @@
 |   sign | What is means ?  |
 |----------|------------------|
 | POSITIVE  | Counter Clockwise movement from AB TO AC so (+ve )  hence C is on Left of AB |
-| NEGATIVE  |  Clockwise movement from AB TO AC so (+ve )  hence C is on Right of AB |
+| NEGATIVE  |  Clockwise movement from AB TO AC so (-ve )  hence C is on Right of AB |
 | ZERO      |  A , B, C all collinear so C touches the line passing via A & B |
 
 

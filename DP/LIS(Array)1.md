@@ -69,12 +69,12 @@ int main() {
 	return 0 ;
 ```
 ### BEST  OPTIMISED APPROACH :
-- trace the `smallest tail` of any LIS
+- trace the `smallest tail` of any length LIS[i]
 - Because if 2 LIS of same len is present than the likeliness of extending the one with smaller end is more as we have more options of next ele of LIS
 - If the any prev tail with val >= curr_num present than curr_num can be a smaller tail of that LIS  => UPDATE THE TAIL TO MINIMISE TAIL VALUE
 - Else curr_num greatest to all prev tails (END OF LIS formed so far) extend the LIS with new TAIL  -> Extend LIS
 
-```
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 

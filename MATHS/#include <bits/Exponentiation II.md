@@ -4,7 +4,8 @@
 Concept : 
 - Fermat's Little Theorem gives us the key. If $m$ is a prime number:
   - a^{m-1} =  1 % m
-`m`-> Prime NO 
+`m`-> Prime NO
+```
 - This is the magic trick. It means that a's powers repeat every (m-1) times.  -
 - a^1 mod m = a^1
 - a^2 mod m = a^2
@@ -16,7 +17,7 @@ Concept :
 - Our problem is a^E mod{m}, where the exponent E = b^c.
 - So we cal E with m-1 expo
 - And then a mod E with m expo
-
+```
   
 ```cpp
 #include <bits/stdc++.h>

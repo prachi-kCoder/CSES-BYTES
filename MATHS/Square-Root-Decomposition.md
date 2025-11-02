@@ -39,3 +39,6 @@ For a fixed v = floor(N/d):
 <img width="976" height="516" alt="image" src="https://github.com/user-attachments/assets/64616398-1572-4f05-beea-64477921dfa5" />
 <img width="1094" height="635" alt="image" src="https://github.com/user-attachments/assets/047270ea-4151-45b8-a93e-87483e58dc03" />
 <img width="986" height="550" alt="image" src="https://github.com/user-attachments/assets/0f8dd6a3-b856-4f19-b792-aba20eea5336" />
+
+
+- To get the sum of ```range[L,R] = (R+L)*( R- L + 1) /2```

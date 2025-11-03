@@ -34,14 +34,13 @@ int main() {
     vector<ll> dp(x+1 , 0LL) ;
     
     dp[0] = 1 ;
-    
-    for (ll c : coins) { // coins in ordered ways
-        for (ll j = c ; j <= x ; j++) {
+    for (ll j = mn ; j <= x ; j++) {
+        for (ll c : coins) {
+            if (c > j) break ;
             dp[j] = ( dp[j] + dp[j-c] )% mod;
         }
     }
-    
-    cout << dp[x] << endl ; 
+    cout << dp[x] << endl ;   
     return 0 ;
 }
 
@@ -55,28 +54,36 @@ We're preventing rearrangements of the same coins from being counted multiple ti
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll ;
-const int mod = 1e9 + 7 ;
+#define ll long long
+const ll mod = (ll)1e9 + 7 ;
+
 int main() {
-    int n , x ;
-    cin >> n >> x ;
-    vector<int> coins(n) ;
-    
-    for ( int i = 0 ; i < n ; i++) {
+    ll n , x ;
+    cin >> n >> x;
+    vector<ll> coins(n);
+    for (ll i = 0; i < n ; i++) {
         cin >> coins[i] ;
     }
-    // Now to keep the coins in Ordered fashion (pick coin in ordered way )
-    vector<ll> dp(x + 1 , 0LL ) ;
-    dp[0] = 1LL ;
-    for (int i = 0 ; i < n ; i++) {
-        for (int j = 0 ; j <=x ; j++) {
-            if (j +  coins[i] <= x) {
-                dp[j + coins[i]] = (dp[j+ coins[i]] + dp[j])%mod ; ;
-            }
+    ll mn = *min_element(coins.begin() , coins.end()) ;
+    if (mn > x) {
+        cout << 0 << endl ;
+        return 0 ;
+    }
+    
+    sort(coins.begin() , coins.end()) ;
+    vector<ll> dp(x+1 , 0LL) ;
+    
+    dp[0] = 1 ;
+    
+    for (ll c : coins) { // coins in ordered ways
+        for (ll j = c ; j <= x ; j++) {
+            dp[j] = ( dp[j] + dp[j-c] )% mod;
         }
     }
     cout << dp[x] << endl ;
+    return 0 ;
 }
+
 ```
 
 

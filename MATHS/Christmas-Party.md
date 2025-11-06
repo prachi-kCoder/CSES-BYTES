@@ -31,21 +31,16 @@ void precompute() {
     }
 }
 
- 
 int main() {
 	ll n ;
 	cin >> n ;
 // 	n! x ( 1 - 1/1! + 1/2! - ..)
-
+    precompute();
 	ll ans = fact[n] ;
 	ll even = 0LL, odd = 0LL ;
 	for (ll i = 0 ; i <= n ; i++) {
 	    if (i % 2 == 0) {
-	        if (i == 0 ) {
-	            even = (even + 1 ) % mod ;
-	        }else {
-	            even = (even + inv_fact[i]) % mod ;
-	        }
+	       even = (even + inv_fact[i]) % mod ;
 	    }else {
 	       odd = (odd + inv_fact[i]) % mod ;
 	    }
@@ -54,8 +49,6 @@ int main() {
 	cout << ans << endl ;
 	
 	
-	return 0;
-	
+	return 0;	
 }
-
 ```

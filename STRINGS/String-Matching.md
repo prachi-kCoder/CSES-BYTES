@@ -6,7 +6,7 @@
 - `The core idea is that when a mismatch occurs, we don't need to backtrack the text pointer. Instead, we use the precomputed lps array to figure out how many characters to shift the pattern to the right, so we can continue the comparison from where we left off in the text string. This is possible because the lps array tells us the length of the longest proper prefix of a substring that is also a suffix of the same substring.`
 
 
-```
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 vector<int> get_lps(const string& pat) {

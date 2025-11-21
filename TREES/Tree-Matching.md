@@ -46,22 +46,15 @@ int main() {
 	    adj[a].push_back(b);
 	    adj[b].push_back(a);
 	}
-// 	for (ll i = 0; i < n ; i++) {
-// 	    cout << "For :" << i+1 << ";" ;
-// 	    for ( ll v : adj[i]) {
-// 	        cout << v+1 << " ";
-// 	    }
-// 	    cout << "\n";
-// 	}
 	
 	vector<bool> vis(n , false) ;
 	dfs(0 , vis ) ;
-	ll c = p.size() ;// all pairs 
-// 	for (auto[u ,v] : p) {
-// 	    cout << "(" << u+1 << "," << v+1 << ")" << endl ;
-// 	}
+	ll c = p.size() ;// all pairs your can simple take a counter as well 
 	cout << c << endl ;
 	return 0 ;
 
 }
 ```
+
+## TC : O(N)
+## SC : O(N)

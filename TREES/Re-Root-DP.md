@@ -13,7 +13,8 @@
 ```
 - In rerooting we have 2 paths
 - Path 1: Dp_up[p]+1  ie One option for u is to go to p (distance 1) and then take the maximum path from p upwards
-- Path from Siblings (Downward): The other option for `u` is to go to `p` (distance 1) and then go down into any of u's sibling branches. The maximum length of these sibling paths is equivalent to L_other[p]
+- Path2 from Siblings (Downward): The other option for `u` is to go to `p` (distance 1)
+ and then go down into any of u's sibling branches. The maximum length of these sibling paths is equivalent to L_other[p]
 
 ```
 

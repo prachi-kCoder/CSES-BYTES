@@ -1,5 +1,21 @@
 # Re-Root-DP
 
+### 1. Downwards Pass (Initial DP: dfs1)
+- Goal: Calculate DP_sub[u] , the maximum distance from node $u$ to any node within the subtree rooted at u .
+- Simply `Dp_sub[u] = among all child nodes v : max(dp_sub[v]) + 1`
+  
+- Upwards Pass (Rerooting: dfs2) :
+- This pass calculates the maximum path length from a node upwards to any node in the rest of the tree (the "outside" component).
+- Transition (from parent `p` to child `u`):
+- Dp_up[v] =  1 + max(dp_up[p] , L_other[p])
+- where `L_other[p]` is the maximum path starting at `p` and going down to any child other than `u`.
+```
+- In rerooting we have 2 paths
+- Path 1: Dp_up[p]+1  ie One option for u is to go to p (distance 1) and then take the maximum path from p upwards
+- Path from Siblings (Downward): The other option for `u` is to go to `p` (distance 1) and then go down into any of u's sibling branches. The maximum length of these sibling paths is equivalent to L_other[p]
+
+```
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
